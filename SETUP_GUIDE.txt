@@ -1,0 +1,114 @@
+================================================================================
+PUBLIC TRANSPORT INFORMATION SYSTEM - QUICK SETUP GUIDE
+================================================================================
+
+STEP 1: INSTALL REQUIREMENTS
+-----------------------------
+- Install XAMPP or WAMP (includes PHP, MySQL, Apache)
+- Download from: https://www.apachefriends.org/
+
+STEP 2: START SERVERS
+----------------------
+- Open XAMPP Control Panel
+- Start Apache server
+- Start MySQL server
+
+STEP 3: CREATE DATABASE
+------------------------
+Option A - Using phpMyAdmin:
+1. Open browser and go to: http://localhost/phpmyadmin
+2. Click "Import" tab
+3. Choose file: database_setup.sql
+4. Click "Go" button
+
+Option B - Using Command Line:
+1. Open Command Prompt/Terminal
+2. Navigate to project folder
+3. Run: mysql -u root -p < database_setup.sql
+4. Press Enter (no password by default)
+
+STEP 4: DEPLOY APPLICATION
+----------------------------
+1. Copy all project files to:
+   XAMPP: C:\xampp\htdocs\public-transport\
+   WAMP: C:\wamp\www\public-transport\
+
+2. Make sure all these files are in the folder:
+   - index.php
+   - config.php
+   - home.php
+   - trial.php
+   - All other PHP files
+   - img folder
+
+STEP 5: ACCESS THE APPLICATION
+-------------------------------
+1. Open web browser
+2. Go to: http://localhost/public-transport/
+3. You should see the homepage with navigation menu
+
+STEP 6: TEST THE SYSTEM
+------------------------
+1. Click "Bus_table" > "View" to see sample data
+2. Click "Station_table" > "View" to see sample stations
+3. Try "Request_time" to check bus arrival times
+
+TROUBLESHOOTING
+---------------
+Problem: "Failed to connect to MySQL"
+Solution: 
+- Check if MySQL is running in XAMPP
+- Verify database name is "publictransport"
+- Check config.php for correct credentials
+
+Problem: "Page not found"
+Solution:
+- Check file is in correct folder
+- Verify Apache is running
+- Check URL spelling
+
+Problem: Sample data not showing
+Solution:
+- Re-run database_setup.sql
+- Check if tables were created in phpMyAdmin
+
+DATABASE CREDENTIALS
+--------------------
+Default settings in config.php:
+- Host: localhost
+- Username: root
+- Password: (empty)
+- Database: publictransport
+
+If you need to change these, edit config.php file.
+
+SAMPLE DATA INCLUDED
+--------------------
+- 4 Bus Stations (Colombo area)
+- 3 Buses assigned to routes
+- 2 Routes with multiple stops
+- Time schedules for Monday
+
+ACCESSING THE FEATURES
+-----------------------
+1. Manage Buses: Add, view, update, delete bus assignments
+2. Manage Stations: Add stations with GPS coordinates
+3. Manage Routes: Define which stations each route passes through
+4. Manage Time Tables: Set arrival/departure times
+5. Request Time: Check when next bus arrives at a station
+
+IMPORTANT NOTES
+---------------
+- This is for educational purposes
+- Not production-ready (needs security improvements)
+- Works on localhost only
+- Requires PHP 7.0+ and MySQL 5.6+
+
+FOR MORE INFORMATION
+--------------------
+See README.md for detailed documentation
+
+================================================================================
+Your system is now ready to use!
+================================================================================
+

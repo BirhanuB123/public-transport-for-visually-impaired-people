@@ -5,14 +5,15 @@
 </head> 
 <body> 
 <section id="sec" style="color:#008080">
-<h1>insert station table</h1> 
+<h1>Insert Station Table</h1> 
 <form action="savestationassaignment2.php" method="POST"> 
-<label for="firstname">station ID </label> 
-<input type="text" name="stationID"><br> 
-station Name <input type="text" name="stationName"><br><br> 
-Latitude <input type="text" name="latitude" ><br> 
-Longitude <input type="text" name="longitude" ><br> 
+<label for="stationID">Station ID </label> 
+<input type="text" name="stationID" required><br><br> 
+Station Name <input type="text" name="stationName" required><br><br> 
+Latitude <input type="text" name="latitude" required><br><br> 
+Longitude <input type="text" name="longitude" required><br><br> 
 <input type="submit" value="Submit"> 
-</form> 
+</form>
+</section> 
 </body> 
 </html>
